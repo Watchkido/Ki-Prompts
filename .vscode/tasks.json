@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    // Definiert alle automatisierten Aufgaben für das Projekt
+    "tasks": [
+        {
+            // Task zum Ausführen aller Unit Tests
+            "label": "Python: Run Tests",
+            "type": "shell",
+            "command": "python",
+            "args": ["-m", "pytest", "tests/"],
+            "group": "test",
+            "presentation": {
+                "echo": true,        // Zeigt den Befehl im Terminal
+                "reveal": "always",  // Terminal wird immer angezeigt
+                "panel": "new"       // Neues Terminal-Panel öffnen
+            }
+        },
+        {
+            /* 
+               Mehrzeiliger Kommentar:
+               Installiert alle Abhängigkeiten aus requirements.txt
+               Wird beim ersten Setup des Projekts benötigt
+            */
+            "label": "Python: Install Dependencies",
+            "type": "shell",
+            "command": "pip",
+            "args": ["install", "-r", "requirements.txt"],
+            "group": "build"
+        },
+        {
+            // Formatiert den gesamten Source Code mit Black
+            "label": "Python: Format Code", 
+            "type": "shell",
+            "command": "black",
+            "args": ["src/"],
+            "group": "build"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+  // ===== GitHub Copilot Einstellungen =====
+  "github.copilot.enable": true,                              // Aktiviert GitHub Copilot generell
+  "github.copilot.advanced": {
+    "listCount": 10,                                           // Anzahl der Vorschläge in der Dropdown-Liste
+    "inlineSuggestCount": 3                                    // Anzahl der Inline-Vorschläge gleichzeitig
+  },
+  "github.copilot.editor.enableAutoCompletions": true,        // Automatische Code-Vervollständigung durch Copilot
+  
+  // ===== Python Interpreter & Umgebung =====
+  "python.defaultInterpreterPath": "./venv/Scripts/python.exe", // Standardpfad zum Python-Interpreter (virtuelle Umgebung)
+  "python.terminal.activateEnvironment": true,                // Aktiviert automatisch die virtuelle Umgebung im Terminal
+  
+  // ===== Code-Qualität & Linting =====
+  "python.linting.enabled": true,                             // Aktiviert Python-Linting generell
+  "python.linting.pylintEnabled": true,                       // Verwendet Pylint für Code-Analyse
+  "python.linting.flake8Enabled": true,                       // Verwendet Flake8 für Style-Checking
+  
+  // ===== Code-Formatierung =====
+  "python.formatting.provider": "black",                      // Verwendet Black als Code-Formatter
+  "python.formatting.blackArgs": ["--line-length=88"],        // Black-Konfiguration: Maximale Zeilenlänge 88 Zeichen
+  
+  // ===== Jupyter Notebook Einstellungen =====
+  "jupyter.askForKernelRestart": false,                       // Fragt nicht nach Kernel-Neustart (automatisch)
+  "jupyter.interactiveWindowMode": "perFile",                 // Ein interaktives Fenster pro Datei
+  
+  // ===== Editor-Optimierungen für Copilot =====
+  "editor.suggestSelection": "first",                         // Wählt automatisch den ersten Vorschlag aus
+  "editor.tabCompletion": "on",                               // Aktiviert Tab-Vervollständigung
+  "editor.wordBasedSuggestions": false,                       // Deaktiviert wortbasierte Vorschläge (weniger Störungen)
+  "editor.inlineSuggest.enabled": true,                       // Aktiviert Inline-Vorschläge (graue Geister-Texte)
+  
+  // ===== Dateien ausblenden (Performance & Übersichtlichkeit) =====
+  "files.exclude": {
+    "**/__pycache__": true,                                    // Versteckt Python-Cache-Ordner
+    "**/.pytest_cache": true,                                  // Versteckt Pytest-Cache
+    "**/venv": true,                                           // Versteckt virtuelle Umgebung (venv)
+    "**/.venv": true,                                          // Versteckt versteckte virtuelle Umgebung (.venv)
+    "**/*.pyc": true                                           // Versteckt kompilierte Python-Dateien
+  },
+  
+  // ===== Git-Integration =====
+  "git.autofetch": true,                                       // Holt automatisch Änderungen vom Remote-Repository
+  "git.confirmSync": false,                                    // Synchronisiert ohne Nachfrage
+  
+  // ===== Python-Analyse & IntelliSense =====
+  "python.analysis.autoImportCompletions": true,              // Schlägt automatisch Imports vor
+  "python.analysis.completeFunctionParens": true,             // Vervollständigt Funktionen mit Klammern
+  
+  // ===== Dateizuordnungen =====
+  "files.associations": {
+    "*.ipynb": "jupyter-notebook"                              // Erkennt .ipynb-Dateien als Jupyter Notebooks
+  }
+}

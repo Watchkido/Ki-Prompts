@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "ms-python.python",                    // Python Extension
+        "ms-python.flake8",                   // Python Linting
+        "ms-toolsai.jupyter",                 // Jupyter Notebooks
+        "ms-python.black-formatter",          // Code Formatting
+        "github.copilot",                     // GitHub Copilot
+        "github.copilot-chat",                // Copilot Chat
+        "ms-vscode.test-adapter-converter",   // Test Explorer
+        "ms-python.pylint",                   // Python Linting
+        "ms-vscode.vscode-json",              // JSON Support
+        "redhat.vscode-yaml",                 // YAML Support
+        "ms-vscode.cmake-tools",              // Build Tools
+        "ms-python.debugpy",                  // Python Debugger
+        "donjayamanne.githistory",            // Git History
+        "eamodio.gitlens",                    // Git Integration
+        "ms-vscode.hexeditor"                 // Hex Editor
+    ]
+}

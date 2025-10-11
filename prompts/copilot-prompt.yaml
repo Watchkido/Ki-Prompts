@@ -1,0 +1,52 @@
+# Copilot Prompt YAML für einheitliche Python-Codequalität
+metadata:
+  version: 1.0
+  author: Frank Albrecht
+  date: 2025-07-01
+  description: "Richtlinien für Python-Codequalität, Dokumentation und Stil."
+
+styleGuide:
+  base: "PEP 8 (angepasst für deutsche Bezeichner)"
+  fileNaming: "snake_case für Module, PascalCase für Klassen"
+  maxLineLength: 77
+  maxNesting: 2
+  maxFunctionLength: 30
+  maxModuleLength: 500
+  noEmojis: true
+
+commentTypes:
+  - "Zweizeiliger deutscher Beschreibungskommentar über jeder Funktion"
+  - "Docstring nach reStructuredText (Sphinx-Style) mit: Beschreibung, Args, Returns, Raises, Beispiele"
+  - "Humorvolle, aber informative Kommentare bei komplexer Logik"
+  - "TODO-Kommentare für Verbesserungen"
+
+codingRequirements:
+  - "Type Hints für alle Funktionen"
+  - "Modulare Aufteilung der Logik"
+  - "Testabdeckung > 80% (pytest empfohlen)"
+  - "Spezifische Exceptions statt bare except"
+  - "logging.getLogger(__name__) mit sinnvollen Levels"
+  - "Dataclasses für Datencontainer"
+  - "Asynchrone Implementierung wo sinnvoll"
+
+folders:
+  - "/src/{quellcode_ordner}"
+  - "/src/{quellcode_ordner}/utils"
+  - "/tests"
+  - "/prompts"
+  - "/scripts"
+  - "/data/raw"
+  - "/data/processed"
+  - "/data/results"
+  - "/data/merged"
+  - "/data/finished"
+  - "/data/cached"
+  - "/docs"
+  - "/datenbank"
+  - "/notebooks"
+
+expectedOutput:
+  - "Gut strukturierter, deutsch kommentierter Python-Code"
+  - "Einhaltung von PEP 8 (deutsche Bezeichner)"
+  - "Klare, modularisierte Funktionen mit Type Hints und vollständiger Dokumentation"
+  - "Kommentierter, verständlicher Code mit humorvollen, aber informativen Erläuterungen"

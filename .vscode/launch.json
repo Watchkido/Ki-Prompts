@@ -1,0 +1,43 @@
+{
+    // VS Code Debug-Konfiguration für Python-Projekte
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Debuggt die aktuell geöffnete Python-Datei
+            "name": "Python: Current File",
+            "type": "debugpy",                          // Python-Debugger verwenden
+            "request": "launch",                       // Programm starten (nicht anhängen)
+            "program": "${file}",                      // Aktuell geöffnete Datei ausführen
+            "console": "integratedTerminal",          // Ausgabe im VS Code Terminal
+            "justMyCode": false                       // Auch Library-Code debuggen (nicht nur eigenen)
+        },
+        {
+            // Debuggt das Haupt-Skript des Projekts
+            "name": "Python: Main Script",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main.py", // Pfad zur Haupt-Datei
+            "console": "integratedTerminal",
+            "args": [],                               // Kommandozeilen-Argumente (leer)
+            "cwd": "${workspaceFolder}"              // Arbeitsverzeichnis auf Projekt-Root setzen
+        },
+        {
+            // Debuggt Unit Tests mit pytest
+            "name": "Python: Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",                      // pytest als Modul ausführen
+            "args": ["tests/"],                     // Alle Tests im tests/ Ordner
+            "console": "integratedTerminal"
+        },
+        {
+            // Debuggt Django-Entwicklungsserver (falls Django verwendet wird)
+            "name": "Python: Django",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py", // Django Management-Script
+            "args": ["runserver"],                   // Django-Server starten
+            "django": true                          // Django-spezifische Debug-Features
+        }
+    ]
+}

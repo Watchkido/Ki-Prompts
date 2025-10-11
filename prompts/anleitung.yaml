@@ -1,0 +1,76 @@
+# Anleitungsdatei für GitHub Copilot, Linter und Templates
+version: 1.0
+author: Frank Albrecht
+last_updated: 2025-07-01
+language: "Deutsch"
+code_language: "Python"
+target_audience: "Copilot, Entwickler:innen, Linter, Templates"
+
+style_guide:
+  standard: "PEP 8"
+  extensions:
+    - "Deutsche Bezeichner (snake_case für Funktionen, PascalCase für Klassen)"
+    - "Max. Zeilenlänge: 77 Zeichen"
+    - "Funktionen < 30 Zeilen, Module < 500 Zeilen"
+    - "Keine Emojis im Code"
+
+naming_conventions:
+  variables: snake_case
+  functions: snake_case
+  classes: PascalCase
+  modules: snake_case
+  constants: UPPER_CASE
+
+documentation:
+  language: "Deutsch"
+  format: "reStructuredText (Sphinx-kompatibel)"
+  function_docstring_template: |
+    Beschreibt die Funktion und ihre Parameter.
+
+    :param <name>: Beschreibung des Parameters
+    :type <name>: <Typ>
+    :returns: Rückgabewert
+    :rtype: <Typ>
+    :raises <Exception>: Beschreibung
+    :example:
+
+        >>> beispiel_funktion(2, 3)
+        5
+
+testing:
+  framework: "pytest"
+  rules:
+    - "Parametrisierte Tests bevorzugen"
+    - "Testabdeckung > 80%"
+    - "Testverzeichnis: /tests/"
+    - "Namen von Testfunktionen beginnen mit test_"
+
+project_structure:
+  root_folders:
+    - src/
+    - tests/
+    - prompts/
+    - docs/
+    - scripts/
+    - data/raw/
+    - data/processed/
+    - data/results/
+    - notebooks/
+  src_subfolders:
+    - src/{projektname}/
+    - src/{projektname}/utils/
+
+error_handling:
+  strategy: "Keine bare excepts, spezifische Exceptions"
+  logging: "Nutze logging.getLogger(__name__)"
+
+async_usage:
+  guideline: "async/await verwenden, wenn IO-intensiv oder wartend"
+
+constraints:
+  - "Maximal zwei Ebenen an Verschachtelung"
+  - "Kein globaler Zustand in Modulen"
+  - "Vermeide Seiteneffekte beim Importieren"
+
+notes:
+  humor: "Kommentare dürfen pointiert und humorvoll sein, aber nicht ablenken"
