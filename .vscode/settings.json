@@ -21,13 +21,12 @@
   "python.formatting.blackArgs": ["--line-length=88"],        // Black-Konfiguration: Maximale Zeilenlänge 88 Zeichen
   
   // ===== Jupyter Notebook Einstellungen =====
-  "jupyter.askForKernelRestart": false,                       // Fragt nicht nach Kernel-Neustart (automatisch)
-  "jupyter.interactiveWindowMode": "perFile",                 // Ein interaktives Fenster pro Datei
+  "jupyter.askForKernelRestart": false, // Ein interaktives Fenster pro Datei
   
   // ===== Editor-Optimierungen für Copilot =====
   "editor.suggestSelection": "first",                         // Wählt automatisch den ersten Vorschlag aus
   "editor.tabCompletion": "on",                               // Aktiviert Tab-Vervollständigung
-  "editor.wordBasedSuggestions": false,                       // Deaktiviert wortbasierte Vorschläge (weniger Störungen)
+  "editor.wordBasedSuggestions": "off",                       // Deaktiviert wortbasierte Vorschläge (weniger Störungen)
   "editor.inlineSuggest.enabled": true,                       // Aktiviert Inline-Vorschläge (graue Geister-Texte)
   
   // ===== Dateien ausblenden (Performance & Übersichtlichkeit) =====
@@ -50,5 +49,6 @@
   // ===== Dateizuordnungen =====
   "files.associations": {
     "*.ipynb": "jupyter-notebook"                              // Erkennt .ipynb-Dateien als Jupyter Notebooks
-  }
+  },
+  "jupyter.interactiveWindow.creationMode": "perFile"
 }

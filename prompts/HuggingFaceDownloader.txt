@@ -1,0 +1,58 @@
+Du bist HuggingFace Download & Archive Engineer. Erstelle ein vollständiges, produktionsreifes Python-Skript (kompatibel mit Windows) namens `llm_archiver.py` plus eine Beispiel-`models.txt`. Anforderungen:
+
+1) Zweck
+- Automatisiertes Herunterladen, Konvertieren/Quantisieren, Archivieren und Prüfen von LLMs & multimodalen Modellen.
+- Ziel-Laufwerk ist ein gemountetes Netzlaufwerk (platzierbar via CLI-Argument), standard: "Z:\llm-archiv-2025" (erstz. user ersetzen).
+- Priorität: Zuverlässigkeit, Resume-Fähigkeit, Metadaten-Archivierung, Lizenz-/Legal-Check, sichere Logs.
+
+2) Modell-Auswahl-Policy
+- Für jede Kategorie (Allround, Liebe/Agenten, Bild, Video, Audio, Multimodal, Kreativ, Hacker/Security, Medizin DE/EN, Forschung, Monster-Modelle) sollen **genau 3 Modelle** ausgewählt werden:
+  - a) **klein**: kleines Modell (z.B. ~1–4 GB)
+  - b) **mid**: ~4–5 GB (mid-sized)
+  - c) **large/best**: best performing / größtes verfügbar (kann >100GB sein)
+- Wenn `models.txt` vorhanden ist: verwende die dort gelisteten Repo-IDs (ein Repo/Zeile). Wenn nicht vorhanden oder leere Kategorie: benutze huggingface_hub.search_models() mit passenden `pipeline_tag`s / `tags` und wähle Top-3 nach `downloads` (oder fallback `lastModified`).
+- Speichere für jedes Modell: repo-id, license, size (geschätzt/real), download_date, model_card_url in einer CSV `metadata.csv`.
+
+3) Download-Verhalten
+- Verwende die offizielle `huggingface_hub`-API für downloads (bei Zugriffstoken `HF_TOKEN` via env var).
+- Resume-fähig: falls Abbruch, beim nächsten Start weiter aufnehmen.
+- Parallele Downloads: konfigurierbar (default 4 Threads).
+- Schreibe Logs (`00_tools/archive_run.log`) mit Zeitstempeln und Fehlercodes.
+
+4) Storage & Struktur
+- Ordnerstruktur unter Wurzel (`<MOUNT>/llm-archiv-2025`) wie in Spec:
+  - 00_tools, 01_llm_allround, 02_llm_specials, 03_image_models, 04_audio_models, 05_video_models, 06_medical_de_en, 07_security_hacker, 08_multimodal, 09_converted_gguf, archives, checksums
+- Nach Download: Originalgewichte in Kategorieordner, License + README im selben Ordner.
+
+5) Quantisierung & Konvertierung
+- Default: bitsandbytes 4-bit (`bnb4`) via `transformers` + `BitsAndBytesConfig`. Erzeuge zusätzlich `safetensors`/`gguf` Varianten falls möglich.
+- Optional Mode `--quant=gptq` (AutoGPTQ): implementiere Hook/placeholder, sichere temporäre Dateien in `00_tools/tmp`.
+- Beim Konvertieren: behalte original files; speichere neue Versionen in `09_converted_gguf/<model>`.
+
+6) Archivierung & Checksums
+- Nach Download + optionaler Quantisierung: erstelle Kategorie-Archive `archives/<category>.tar.zst`.
+- Berechne SHA256 für alle Archive in `checksums/archives_sha256.txt`.
+- Optional Signatur-Hook (GPG) — Implementiere Platzhalter.
+
+7) Autoupdate / Better-model-check
+- Beim Start: für jedes Kategorie-Modell prüfe mit huggingface_hub.search_models ob es `stars/downloads/lastModified` Verbesserungen gibt.
+- Wenn bessere Modelle (neuer + mehr downloads) existieren, füge sie in `models_candidates.csv` und frage (CLI-flag `--auto-accept`) ob automatisch ersetzt werden soll. Default: `--auto-accept` = True (weil Script für technisch versierten Nutzer).
+
+8) Sicherheit & Lizenz
+- Speichere jede `LICENSE` Datei neben dem Modell.
+- Wenn Lizenz "no_license" oder restriktiv, markiere in metadata und optional `--skip-restricted`.
+- Warnung bei Security/Hacker-Modellen: nur für defensive Forschung; logge Zugriff.
+
+9) Usability & Betrieb
+- CLI-Flags: `--root`, `--models-file`, `--threads`, `--quant=bnb4|gptq|none`, `--auto-accept`, `--dry-run`, `--resume`, `--debug`.
+- Erzeuge `models.txt` Beispiel mit mindestens 3 Modelle pro Kategorie (placeholders acceptable).
+- Schreibe eine README in `00_tools/README_archive.md` mit Benutzung, Abhängigkeiten (python, pip pakete, CUDA-Requirements), und Dockerfile template.
+
+10) Output
+- Vollständig lauffähiges `llm_archiver.py` (Windows-ready), `models.txt` beispiel, `00_tools/setup_env.bat` (pip install requirements), `00_tools/conda_env.yml` optional, `00_tools/dockerfile` optional.
+- Kommentiere: jede Funktion mit docstring, klare Fehlerbehandlung.
+
+11) Legal/Ethik
+- Erzeuge eine kurze `00_tools/legal_warning.txt` die auf Nutzungseinschränkungen hinweist (Medizin, Security, Personendaten).
+
+Generiere das komplette Skript und templates in der Antwort. Verwende pragmatische Defaults: quant=bnb4, threads=4, root="Z:\llm-archiv-2025". Nutze keine externen nicht vertrauenswürdigen Repos ohne Benutzerwarnung. Ende.
