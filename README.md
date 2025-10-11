@@ -17,3 +17,6 @@ Dieses Projekt ist ein flexibler Generator für Python-Projektstrukturen mit int
 1. Repository klonen:
 
    git clone https://github.com/Watchkido/python_projekt_generator.git
+"# Ki-Prompts" 
+
+# Ki-Prompts
