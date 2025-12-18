@@ -1,0 +1,16 @@
+{
+  "identifier": "@local:04-da-dashboard-vorbereiten",
+  "name": "04 DA Dashboard vorbereiten",
+  "changed": true,
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "gib mir 3 warme  Farben nach ...farbring \nFormat: Farbe #ffffff \n\nInstruction:\ngib mir immer eine kurze erklärung zu deiner antwort."
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "identifier": "@local:python-wizardcoder",
+  "name": "Python Wizardcoder",
+  "changed": false,
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "Du bist ein professioneller Python Programmierer"
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "identifier": "@local:000-data-analyst-fragestellung",
+  "name": "000 Data Analyst Fragestellung",
+  "changed": true,
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "Stelle den folgenden Text in Fragen um, so das ich sie einer KI stellen kann die mir PowerBI DAX Formeln dafür erstellt um die Fragen zu finden. Sortiere die Fragen so das dass Measure gleich der entsprechenden tabelle zugeordnet werden kann.\nHier die Tabellenstrucktur:\n\nTable: cards_data\nColumns:\nid Decimal \nkunden_id Decimal \nkartenmarke Double \nkartentyp Double \nkartennummer Double \ncvv Decimal \nhat_chip Double \nanzahl_ausgestellter_karten Decimal \nkredit_limit Decimal \njahr_letzte_pin_änderung Decimal \nablauf_monat Decimal \nablauf_jahr Decimal \nkonto_eröffnungsmonat Decimal \nkonto_eröffnungsjahr Decimal \n\nTable: transactions_data\nColumns:\nID Decimal \nUTC Variant \nClient_ID Decimal \nKarten_ID Decimal \nBetrag Decimal \nChip_verwenden Double \nHändler_ID Decimal \nHändlerstadt Double \nHändlerbundesstaat Double \nPostleitzahl Decimal \nHändlerkategoriecode Decimal \nFehler_in_Transaktion Double \nTransaktions_ID Decimal \nREDFLAG_bestätigter_Betrug Double \n\nTable: user_data\nColumns:\nID Decimal \naktuelles_Alter Decimal \nRenteneintrittsalter Decimal \nGeburtsjahr Decimal \nGeburtsmonat Decimal \nGeschlecht Double \nAdresse Double \nBreitengrad Variant \nLängengrad Variant \nPro_Kopf_Einkommen Decimal \nJahreseinkommen Decimal \nGesamtschulden Decimal \nFICO-Score Decimal \nAnzahl_Kreditkarten Decimal \nREDFLAG_Einkommen Double \n\nTable: mcc_codes\nColumns:\nmcc Double \nBeschreibung Double \n\nTable: DataTable\nColumns:\nDate Variant \nJahr Decimal \nMonthNo Decimal \nMonat Double \nQuarterNo Decimal \nQuartal Double \nTag Decimal \n\nHinweis, dashier sind die Datentypen: | DataType | Bedeutung |\n| -------- | --------- |\n| 1        | Int64     |\n| 2        | Double    |\n| 3        | Boolean   |\n| 4        | String    |\n| 5        | DateTime  |\n| 6        | Decimal   |\n| 7        | Binary    |\n| 8        | Variant   |\n\n\nTable: Date_Table\nColumns:\ndate date\nJahreszahl int\nQuartal int\nMonatszahl int\nWochennummer int\nISO_Wochennummer int\nTageszahl int\nWochentag varchar(9)\nJahreszeit varchar(8)\nHell_Dunkel varchar(4)\nMondphase varchar(11)\nUS_Ostzeit datetime\nUS_Westzeit datetime\nBagdad_Zeit datetime\nPeking_Zeit datetime\n"
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}

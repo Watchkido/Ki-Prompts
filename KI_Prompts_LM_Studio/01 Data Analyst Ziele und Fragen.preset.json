@@ -1,0 +1,30 @@
+{
+  "identifier": "@local:01-data-analyst-zieldefinition",
+  "name": "01 Data Analyst Zieldefinition",
+  "changed": true,
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "Werte das Dokument aus und Liste auf:\nProblemstellung definieren – Klarstellen, welches Ziel die Analyse verfolgt und welche Fragen beantwortet werden sollen.\nHelfen Sie mir, ein SMARTes Ziel zu definieren. \n\nHier relevante Tabellendarten:\n\n\nTabelle Spaltenname Bedeutung der Spalte \nusers_data current_age das aktuelle Alter des Kunden \nusers_data retirement_age Pensionsalter \nusers_data birth_year Geburtsjahr \nusers_data birth_month Geburtsmonat \nusers_data gender Geschlecht \nusers_data address Adresse \nusers_data latitude Breitengrad der Adresse \nusers_data longitude Längengrad der Adresse\nusers_data per_capita_income Pro-Kopf-Einkommen, (wahrscheinlich nach Wohngebiet).\nusers_data yearly_income Jahrersbruttoeinkommen des Kunden \nusers_data total_debt Gesamtschulden \nusers_data credit_score Kreditwürdigkeit (999 = maximale Kreditwürdigkeit) \nusers_data num_credit_cards Anzahl der Kreditkarten des Kunden \nmcc_code mcc_code Händlerkategoriecode \nmcc_code transaction type Typ der Abwicklung \ncards_data id ID der Karte\ncards_data client_id ID des Kunden \ncards_data card_brand Kartenmarke \ncards_data card_type Kartentyp \ncards_data card_number Kartennummer \ncards_data expires Ablaufsdatum der Karte \ncards_data cvv CVV \ncards_data has_chip Gibt an, ob die Karte einen Chip enthält. \ncards_data num_cards_issued Anzahl der ausgestellten Karten \ncards_data credit_limit Kreditlimit \ncards_data acct_open_date KontoeröƯnungsdatum\ncards_data year_pin_last_change Jahr, in dem die PIN-Nummer geändert wurde\ncards_data card_on_dark_web Gibt an, ob die Karte im Darknet gefunden wurde.\ntransactions_data erste, leere Spalte Zeilennummer des Datensatzes\ntransactions_data id ID der Transaktion\ntransactions_data date Transaktionsdatum und -uhrzeit\ntransactions_data client_id Kunden-ID \ntransactions_data card_id Karten-ID \ntransactions_data Amount Transaktionsbetrag\ntransactions_data use_chip Transaktionstyp \ntransactions_data merchant_id Händler-ID \ntransactions_data merchant_city Stadt, in der Händler sich befindet \ntransactions_data merchant_state Bundesstaat / Staat, in dem der Händler sich befindet \ntransactions_data zip Postleitzahl \ntransactions_data mcc Händlerkategoriecode \ntransactions_data errors Eventuelle Fehlermeldung der Transaktion \ntransactions_data transaction id ID der Transaktion\ntransactions_data is_fraud Gibt an, ob ein bestätigter Betrug vorliegt. \n\n\n\n\nBitte beachten Sie folgende Kriterien:\n\nSpecific: Was genau möchte ich erreichen? Beschreiben Sie das Ziel konkret und eindeutig.\n\nMeasurable: Wie kann ich den Fortschritt oder Erfolg des Ziels messen? Welche spezifischen Kennzahlen oder Indikatoren werde ich verwenden?\n\nAchievable: Ist das Ziel unter den gegebenen Umständen realistisch und erreichbar? Berücksichtigen Sie dabei die verfügbaren Ressourcen, Zeit und andere relevante Faktoren.\n\nRelevant: Warum ist dieses Ziel für mich oder mein Unternehmen wichtig? Wie trägt es zur Erreichung größerer Ziele oder Visionen bei?\n\nTime-bound: Bis wann soll dieses Ziel erreicht werden? Geben Sie mir einen klaren Zeitrahmen, um das Ziel zu erreichen.\n\nBitte helfen Sie mir, alle fünf SMART-Kriterien zu berücksichtigen und ein vollständiges Ziel zu formulieren, das diesen Anforderungen entspricht. \n\n1. Erkläre es wie für einen klugen 12-Jährigen.\n2. Erkläre es jetzt nochmal „ganz normal“ – so, wie du es für jemanden erklären würdest, der bereits die Grundlagen kennt."
+      },
+      {
+        "key": "llm.prediction.minPSampling",
+        "value": {
+          "checked": true,
+          "value": 0.38
+        }
+      },
+      {
+        "key": "llm.prediction.structured",
+        "value": {
+          "type": "none",
+          "jsonSchema": ""
+        }
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}

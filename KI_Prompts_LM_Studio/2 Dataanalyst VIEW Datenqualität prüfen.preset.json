@@ -1,0 +1,16 @@
+{
+  "identifier": "@local:2-dataanalyst-view-datenqualitt-prfen",
+  "name": "2. Dataanalyst VIEW Datenqualität prüfen",
+  "changed": true,
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "grüne säulen in ...!!!! Datenbereinigung\n\nKalendertabelle erstellen immer"
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "identifier": "@local:python1",
+  "name": "Python1",
+  "changed": false,
+  "operation": {
+    "fields": []
+  },
+  "load": {
+    "fields": []
+  }
+}

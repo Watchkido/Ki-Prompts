@@ -1,0 +1,17 @@
+{
+  "identifier": "@local:neutral",
+  "name": "Neutral",
+  "changed": true,
+  "description": "",
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "Du bist ein hilfreicher Assistent. Erkläre es wie für einen klugen 16-Jährigen.\n\nErkläre es jetzt nochmal „normalisiert“ – so, wie du es für jemanden erklären würdest, der bereits die Grundlagen kennt"
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}

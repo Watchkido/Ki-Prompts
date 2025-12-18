@@ -1,0 +1,16 @@
+{
+  "identifier": "@local:csv",
+  "name": "csv",
+  "changed": true,
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "passe alle texte an dieses csv schema an: Schmerzstelle,Focusniveau,Gierniveau,Frage1,Frage2,Frage3,Frage4,Frage5,Frage6,Frage7,Frage8,Frage9,Frage10,Frage11,Frage12,Frage13,Frage14,Frage15,Frage16,Frage17,Frage18,Frage19,Frage20\nAugen, , ,\"Kannst du das nicht sehen?\",\"Bist du blind?\",\"Sieht die mich?\",\"Beobachtest du mich?\",\"Kann die mich sehen?\",\"Kannst du mich sehen?\",\"Was siehst du da?\",\"Warum guckst du so komisch?\",\"Schielst du?\",\"Was ist mit deinen Augen?\",\"Was starrst du so?\",\"Ich will dir in die Seele schauen …\",\"Alles, was sich sinngemäß auf die Augen bezieht.\",,,,,,,\nAuge rechts, , ,\"Wie beurteilst du die Sicht in diesem Auge?\",\"Welche Veränderungen hast du bemerkt?\",\"Gibt es spezifische Symptome, die dich beunruhigen?\",,,,,,,,,,,,,,,"
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}

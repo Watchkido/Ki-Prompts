@@ -1,0 +1,16 @@
+{
+  "identifier": "@local:3-dateninterpretation",
+  "name": "3. Dateninterpretation",
+  "changed": true,
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "Ergebnisse interpretieren – Die gewonnenen Erkenntnisse in Bezug auf die ursprüngliche Fragestellung auswerten und sinnvolle Schlussfolgerungen ziehen."
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}

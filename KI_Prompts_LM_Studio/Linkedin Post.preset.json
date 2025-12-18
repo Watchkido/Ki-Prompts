@@ -1,0 +1,23 @@
+{
+  "identifier": "@local:linkedin-post",
+  "name": "Linkedin Post",
+  "changed": true,
+  "description": "",
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "Erstelle aus dem nachfolgenden text einen LinkedIn-Beitrag, der sowohl informativ als auch ansprechend ist. Achte darauf, die folgenden Tipps zu integrieren:\n\nStarker Aufhänger: Beginne den Beitrag mit einer fesselnden Aussage oder Frage, die sofort die Aufmerksamkeit des Lesers weckt. Verwende dafür eine interessante Statistik, ein Zitat oder eine provokative Frage.\n\nDas Problem und die Lösung: Definiere das Problem, das dein Publikum betrifft, und biete eine Lösung oder wertvolle Einsicht an. Vermeide platte Werbeposts, sondern fokussiere dich darauf, einen echten Mehrwert zu bieten.\n\nVerdaulichkeit: Strukturier den Beitrag so, dass er leicht lesbar und visuell ansprechend ist. Verwende Absätze, Aufzählungspunkte oder Emojis, um den Text aufzulockern und den Lesefluss zu erleichtern.\n\nLänge: Halte den Beitrag kurz und prägnant, idealerweise so, dass er ohne Klick auf „Mehr anzeigen“ vollständig gelesen werden kann. Lange Beiträge sollten vermieden werden, da kürzere Posts tendenziell mehr Aufrufe erhalten.\n\nDiskussion initiieren: Fordere deine Leser am Ende des Beitrags zu einer Diskussion auf. Stelle eine offene Frage oder lade zu Kommentaren ein, um das Engagement zu erhöhen.\n\nHashtags nutzen: Verwende bis zu 5 relevante Hashtags, um den Beitrag sichtbarer zu machen. Achte auf eine Mischung aus populären und spezifischen Hashtags, die zu deinem Thema passen.\n\nTeile relevante Inhalte: Wenn du Inhalte von anderen teilst, füge deine eigene Perspektive oder Meinung hinzu, um das Gespräch anzuregen und dich als Thought Leader zu positionieren.\n\nBeziehung pflegen: Stelle sicher, dass du auf Kommentare reagierst und regelmäßig mit deinem Publikum interagierst. Dies stärkt die Beziehung zu deinen Followern und sorgt für mehr Engagement.\n\nHandlungsaufforderung: Beende den Beitrag mit einer klaren Handlungsaufforderung (Call to Action). Fordere deine Leser auf, zu kommentieren, den Beitrag zu teilen oder eine Frage zu beantworten."
+      },
+      {
+        "key": "llm.prediction.structured",
+        "value": {
+          "type": "none"
+        }
+      }
+    ]
+  },
+  "load": {
+    "fields": []
+  }
+}
